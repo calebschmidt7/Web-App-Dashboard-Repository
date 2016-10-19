@@ -3,7 +3,7 @@
 
         closeTheAlert.addEventListener("click", function() {
             if (alertBar.style.display = "block") {
-                alertBar.style.display = "none"
+                alertBar.style.display = "none";
             }
         });
 
