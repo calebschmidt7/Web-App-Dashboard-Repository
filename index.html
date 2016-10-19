@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web App Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet"  href="toggle-switch.css">
+	<link rel="stylesheet" type="text/css" href="dashboardstyle.css">
+</head>
+<body>
+	<nav>
+		<a href="#" id="app-name"><span style="font-weight: bold;">Your</span>App</a>
+		<div id="nav-icons">
+			<img src="icons/icon-bell.svg" id="bell" alt="bell icon alerting user to new notifications">
+			<img src="icons/profile.jpg" id="profile-pic" alt="profile picture of user">
+			<p>Mr. Dez Iner</p>
+		</div>
+	</nav>
+
+	<div class="container clearfix">
+
+	<div id = "sidebar">
+		<img src="icons/icon-dashboard.svg" class="sidebar-icons" alt="icon representing dashboard web page">
+		<img src="icons/icon-members.svg" class="sidebar-icons" alt="icon representing members page">
+		<img src="icons/icon-visits.svg" class="sidebar-icons" alt="icon representing number of visits page">
+		<img src="icons/icon-settings.svg" class="sidebar-icons" alt="icon representing settings page">
+	</div>
+
+	<div id="main-content">
+	
+	<div id="alert">
+		<p>ALERT! Sir Knight liked your post in SEO Tips.</p>
+		<p id="close"><a href="#">X</a></p> 
+	</div>
+	
+	<h1>Dashboard</h1>
+
+    <div id="linechart">
+ 	  <canvas id="myChart" ></canvas>
+    </div>
+    <div id="barchart">
+ 	  <canvas id="myChart2" ></canvas>
+    </div>
+    <div id="doughnutchart">
+ 	  <canvas id="myChart3" ></canvas>
+    </div>
+
+    <div id="social-stats">
+    	<h2>Social Stats</h2>
+    	<div class="social-numbers">
+    		<img src="icons/icon-twitter.svg" id="twitter-icon" alt="icon of the Twitter logo">
+    		<p>Twitter</p>
+    		<p>10,345</p>
+    	</div>
+    	<div class="social-numbers">
+    		<img src="icons/icon-facebook.svg" id="facebook-icon" alt="icon of the Facebook logo">
+    		<p>Facebook</p>
+    		<p>8,739</p>
+    	</div>
+    	<div class="social-numbers">
+    		<img src="icons/icon-google-plus.svg" id="google-plus-icon" alt="icon of the Google Plus logo">
+    		<p>Google Plus</p>
+    		<p>2,530</p>
+    	</div>
+    </div>
+    
+    <div id="members">
+    	<h3>New Members</h3>
+    	<ul id="new-members">
+    		<li><img src="icons/billybob.jpg"> <p>Billy Bob</p> <p>08/15/16</p></li>
+    		<li><img src="icons/jill.jpg"> <p>Jill Jenkins</p> <p>09/20/16</p></li>
+    		<li><img src="icons/sirknight.jpg"> <p>Sir Knight</p> <p>10/03/16</p></li>
+    	</ul>
+    </div>
+    <div id="activity">
+    	<h3>Recent Activity</h3>
+    	<ul id="member-activity">
+    		<li><img src="icons/billybob.jpg"> <p>Billy Bob commented on YourApp's lack of a coffee bar</p> <p>1 week ago</p></li>
+    		<li><img src="icons/jill.jpg"> <p>Jill Jenkins loves your site's colors</p> <p>1 day ago</p></li>
+    		<li><img src="icons/sirknight.jpg"> <p>Sir Knight signed up for the premium plan</p> <p>3 hours ago</p></li>
+    	</ul>
+    </div>
+    
+    
+    <form>
+    	<fieldset id="message">
+    		<legend>Message User</legend>
+    			<input type="text" placeholder="Search For User">
+    			<textarea placeholder="Message For User"></textarea>
+    			<button>Send</button>
+    	</fieldset>
+    </form>
+    
+    <form>
+    	<fieldset id="settings">
+		  <legend>Settings</legend>
+		  	<label class="switch-light switch-candy" onclick="">
+  				<input type="checkbox">
+
+			  <strong>
+			    Send Email Notifications
+			  </strong>
+
+			  <span class="switch">
+			    <span>Off</span>
+			    <span>On</span>
+			    <a></a>
+			  </span>
+			</label>
+			<label class="switch-light switch-candy" onclick="">
+  				<input type="checkbox">
+
+			  	<strong>
+			    	Set Profile to Public
+			  	</strong>
+
+			  	<span class="switch">
+			    	<span>Off</span>
+			    	<span>On</span>
+			    <a></a>
+			  	</span>
+			</label>
+
+			<label>Time Zone</label>
+			<select>
+				<option value="pacific">Pacific</option>
+				<option value="mountain">Mountain</option>
+				<option value="central">Central</option>
+				<option value="Eastern">Eastern</option>
+			</select>
+			<button>Save</button>
+		</fieldset>
+    </form>	
+ </div>
+ </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+ <script src="scripts.js"></script>
+</body>
+</html>
